@@ -13,13 +13,15 @@ export default function App() {
     <>
       <Canvas
         shadows
-        onCreated={(state) => state.events.connect(overlay.current)}
-        raycaster={{
-          computeOffsets: ({ clientX, clientY }) => ({
-            offsetX: clientX,
-            offsetY: clientY,
-          }),
-        }}
+        onCreated={(state: any) => state.events.connect(overlay.current)}
+        raycaster={
+          {
+            computeOffsets: ({ clientX, clientY }: any) => ({
+              offsetX: clientX,
+              offsetY: clientY,
+            }),
+          } as any
+        }
       >
         <ambientLight intensity={1} />
         <Suspense fallback={null}>
