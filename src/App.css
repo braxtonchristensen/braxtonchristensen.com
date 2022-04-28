@@ -57,13 +57,10 @@ body {
 }
 
 .dot {
-  height: 100vh;
   pointer-events: none;
   position: sticky;
   top: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: inline-block;
   max-width: 600px;
   padding: 0;
   padding: 80px;
@@ -73,7 +70,7 @@ body {
   letter-spacing: 1.5px;
 }
 
-.dot-inner > h1 {
+.dot > h1 {
   -webkit-font-smoothing: auto;
   pointer-events: none;
   color: white;
@@ -82,31 +79,6 @@ body {
   line-height: 1em;
   margin: 0;
   margin-bottom: 0.25em;
-}
-
-.links {
-  pointer-events: all;
-  display: flex;
-  flex-direction: column;
-}
-/* unvisited link */
-a:link {
-  color: #a0a0a0;
-}
-
-/* visited link */
-a:visited {
-  color: #a0a0a0;
-}
-
-/* mouse over link */
-a:hover {
-  color: white;
-}
-
-/* selected link */
-a:active {
-  color: white;
 }
 
 @media only screen and (max-width: 1000px) {
